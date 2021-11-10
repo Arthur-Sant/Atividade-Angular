@@ -1,21 +1,26 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './views/home/home.component';
-import { PaymentComponent } from './views/payment/payment.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { PaymentCreateComponent } from "./components/payment/payment-create/payment-create.component";
+import { HomeComponent } from "./views/home/home.component";
+import { PaymentComponent } from "./views/payment/payment.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: "payments",
-    component: PaymentComponent
-  }
+    component: PaymentComponent,
+  },
+  {
+    path: "payments/create",
+    component: PaymentCreateComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

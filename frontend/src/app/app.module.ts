@@ -6,18 +6,30 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { HeaderComponent } from "./components/template/header/header.component";
-import { HomeComponent } from './views/home/home.component'
+import { HomeComponent } from "./views/home/home.component";
 import { FooterComponent } from "./components/template/footer/footer.component";
 import { NavComponent } from "./components/template/nav/nav.component";
+import { PaymentComponent } from "./views/payment/payment.component";
+import { PaymentCreateComponent } from "./components/payment/payment-create/payment-create.component";
 
 import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatSidenavModule } from '@angular/material/sidenav'
-import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
-import { PaymentComponent } from './views/payment/payment.component'
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatListModule } from "@angular/material/list";
+import { MatCardModule } from "@angular/material/card";
+import { MatButtonModule } from "@angular/material/button";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { HttpClientModule } from '@angular/common/http'  
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, PaymentComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavComponent,
+    HomeComponent,
+    PaymentComponent,
+    PaymentCreateComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,7 +37,10 @@ import { PaymentComponent } from './views/payment/payment.component'
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
